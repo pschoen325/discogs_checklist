@@ -1,0 +1,9 @@
+<%= form_for params["q"] do |f| %>
+  <%= f.text_field  %>
+  <%= f.submit_field %>
+<% end %>
+
+<% @results.each do |result| %>
+<li><%= result %></li>
+<img src="<%=result['thumb'] %>" alt="">
+<% end %>
